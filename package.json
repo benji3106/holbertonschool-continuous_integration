@@ -1,0 +1,14 @@
+{
+  "name": "holbertonschool-continuous_integration",
+  "version": "1.0.0",
+  "description": "CI/CD learning project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "globals": "^17.11.0"
+  }
+}
