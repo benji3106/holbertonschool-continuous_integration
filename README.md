@@ -30,7 +30,7 @@ Added `cache: 'npm'` to `actions/setup-node` in both jobs, and switched from `np
 
 ## 4-Secrets and control flow
 
-The `deploy` job uses a repository secret (`DEPLOY_TOKEN`) referenced via the `secrets` context — never hardcoded, never printed in logs. It runs only after `lint` and `test` succeed (`needs: [lint, test]`), and only on pushes to `main` (`if: github.ref == 'refs/heads/main' && github.event_name == 'push'`).
+The `deploy` job uses a repository secret (`DEPLOY_TOKEN`) referenced via the `secrets` context, never hardcoded, never printed in logs. It runs only after `lint` and `test` succeed (`needs: [lint, test]`), and only on pushes to `main` (`if: github.ref == 'refs/heads/main' && github.event_name == 'push'`).
 
 - ✅ [Deploy job runs after lint/test on push to main](https://github.com/benji3106/holbertonschool-continuous_integration/actions/runs/32950792690)
 - ⊘ [Deploy job correctly skipped on a pull_request / non-main branch](https://github.com/benji3106/holbertonschool-continuous_integration/pull/3/checks)
