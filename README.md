@@ -20,3 +20,5 @@ Tests run automatically on every `pull_request` via the `test` job in `.github/w
 The `test` job runs across Node.js versions 20, 22, and 24 in parallel using a matrix strategy.
 
 ✅ [Matrix run — all 3 versions passing](https://github.com/benji3106/holbertonschool-continuous_integration/actions/runs/32942286666)
+
+## Dependency caching
