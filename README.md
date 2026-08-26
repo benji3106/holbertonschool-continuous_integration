@@ -22,3 +22,8 @@ The `test` job runs across Node.js versions 20, 22, and 24 in parallel using a m
 ✅ [Matrix run — all 3 versions passing](https://github.com/benji3106/holbertonschool-continuous_integration/actions/runs/32942286666)
 
 ## Dependency caching
+
+Added `cache: 'npm'` to `actions/setup-node` in both jobs, and switched from `npm install` to `npm ci` for reproducible installs compatible with caching.
+
+- **Before caching** (cache miss, first run): `Install dependencies` took **3s** — [run #14](https://github.com/benji3106/holbertonschool-continuous_integration/actions/runs/32944201252)
+- **After caching** (cache hit, second run): `Install dependencies` took **1s** — [run #15](https://github.com/benji3106/holbertonschool-continuous_integration/actions/runs/32944555029)
